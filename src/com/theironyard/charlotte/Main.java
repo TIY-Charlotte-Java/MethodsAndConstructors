@@ -13,6 +13,8 @@ public class Main {
         Car carTwo = new Car("Acura", "NSX", "Sports", "Red", 2014, 50000.00,  13.0);
         Shoe shoeOne = new Shoe(12, 79.99, "Nike", "SoccerCleats", false);
 
+        CustomMath problemOne = new CustomMath(2.00, 5.00, 2.00);
+
         /**
          *
          * Old Style before Constructors and Getters and Setters
@@ -80,5 +82,7 @@ public class Main {
         System.out.println("The size of this random card is: " +cardOne.findDimension(cardThree));
         System.out.println("\nThe monthly payments for " + carTwo.getMake() + " " + carTwo.getModel() + " is: " + carTwo.monthlyPayments(carTwo));
         System.out.println("Testing all get methods: " + shoeOne.getBrand() + " " + shoeOne.getType() + " " + shoeOne.getPrice() + " " + shoeOne.getSize() + " " + shoeOne.isVelcro());
+        System.out.println("\nThe area of the circle is: " + problemOne.findCircleArea(problemOne.getRadius()));
+        System.out.println("\nThe length of the hypotenuse is: " + problemOne.findHypotenuse(problemOne.getLegA(), problemOne.getLegB()));
         }
 }
