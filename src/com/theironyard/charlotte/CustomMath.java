@@ -37,15 +37,18 @@ public class CustomMath {
         this.legB = legB;
     }
 
-    public double findCircleArea (double radius) {
+    public double findCircleArea (CustomMath cm) {
         double area;
+        double radius = cm.radius;
         radius *= radius;
         area = pi * radius;
         return area;
     }
 
-    public double findHypotenuse (double legA, double legB) {
+    public double findHypotenuse (CustomMath cm) {
         double hypotenuse;
+        double legA = cm.legA;
+        double legB = cm.legB;
         legA *= legA;
         legB *= legB;
         hypotenuse = legA + legB;

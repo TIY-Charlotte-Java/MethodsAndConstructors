@@ -82,7 +82,7 @@ public class Main {
         System.out.println("The size of this random card is: " +cardOne.findDimension(cardThree));
         System.out.println("\nThe monthly payments for " + carTwo.getMake() + " " + carTwo.getModel() + " is: " + carTwo.monthlyPayments(carTwo));
         System.out.println("Testing all get methods: " + shoeOne.getBrand() + " " + shoeOne.getType() + " " + shoeOne.getPrice() + " " + shoeOne.getSize() + " " + shoeOne.isVelcro());
-        System.out.println("\nThe area of the circle is: " + problemOne.findCircleArea(problemOne.getRadius()));
-        System.out.println("\nThe length of the hypotenuse is: " + problemOne.findHypotenuse(problemOne.getLegA(), problemOne.getLegB()));
+        System.out.println("\nThe area of the circle is: " + problemOne.findCircleArea(problemOne));
+        System.out.println("\nThe length of the hypotenuse is: " + problemOne.findHypotenuse(problemOne));
         }
 }
