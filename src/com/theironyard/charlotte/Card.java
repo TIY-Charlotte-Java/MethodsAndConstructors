@@ -2,12 +2,12 @@ package com.theironyard.charlotte;
 
 public class Card {
     //Fields
-    String nameTo;
-    String nameFrom;
-    String contents;
-    boolean holidayCard;
-    boolean wellCard;
-    double price;
+    private String nameTo;
+    private String nameFrom;
+    private String contents;
+    private boolean holidayCard;
+    private boolean wellCard;
+    private double price;
 
     //Constructor
     public Card(String nameTo, String nameFrom, String contents, boolean holidayCard, boolean wellCard, double price) {

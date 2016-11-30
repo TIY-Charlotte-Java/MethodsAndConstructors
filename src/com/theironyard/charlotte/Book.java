@@ -2,12 +2,12 @@ package com.theironyard.charlotte;
 
 public class Book {
     //Fields
-    String author;
-    String title;
-    boolean fiction;
-    boolean hardCover;
-    double usCost;
-    double canadianCost;
+    private String author;
+    private String title;
+    private boolean fiction;
+    private boolean hardCover;
+    private double usCost;
+    private double canadianCost;
 
     // Constructor
     public Book(String author, String title, boolean fiction, boolean hardcover, double usCost, double canadianCost) {

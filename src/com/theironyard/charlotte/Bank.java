@@ -2,8 +2,8 @@ package com.theironyard.charlotte;
 
 public class Bank {
     //Fields
-    double checkings;
-    double savings;
+   private double checkings;
+   private double savings;
 
     //Constructor
     public Bank(double checkings, double savings) {

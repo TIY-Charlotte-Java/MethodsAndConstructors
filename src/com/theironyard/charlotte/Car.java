@@ -2,13 +2,13 @@ package com.theironyard.charlotte;
 
 public class Car {
     //Fields
-    String make;
-    String model;
-    String type;
-    String color;
-    int year;
-    double price;
-    double apr;
+    private String make;
+    private String model;
+    private String type;
+    private String color;
+    private int year;
+    private double price;
+    private double apr;
     //Constructor
     public Car(String make, String model, String type, String color, int year, double price, double apr) {
         this.make = make;
