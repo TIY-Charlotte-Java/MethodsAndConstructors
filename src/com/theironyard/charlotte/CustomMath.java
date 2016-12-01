@@ -6,13 +6,13 @@ package com.theironyard.charlotte;
 public class CustomMath {
 
 
-    public double circleArea(double a) {
+    public static double circleArea(double a) {
         double area=0.00;
         area = Math.PI*(a*a);
         return area;
     }
 
-    public double hypotensue(double lengthOne, double lengthTwo) {
+    public static double hypotensue(double lengthOne, double lengthTwo) {
         double length;
         //length = Math.sqrt((Math.pow()) + (Math.pow()));
         length = Math.sqrt((lengthOne*lengthOne) + (lengthTwo*lengthTwo));
