@@ -8,6 +8,7 @@ public class Car {
     String model;
     int year;
     double cost;
+    final double tax = .013;
 
     public Car(String carMake, String carModel, int carYear, double carCost) {
         make = carMake;
@@ -56,13 +57,14 @@ public class Car {
 
 
     public void setCost(int carCost) {
-        cost = carCost;
+
+        cost = carCost + (carCost * tax);
     }
 
 
     public void myCar() {
         System.out.println("This is my dream car " + make + " " + model + " " + year + " " +
-                "but the price is a killer  " + "$" + cost + " but you live once");
+                "but the price is a killer  " + "$" + cost  + " but you live once");
 
     }
 }

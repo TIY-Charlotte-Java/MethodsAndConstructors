@@ -26,6 +26,9 @@ public class Main {
         myCar.myCar();
         myCar.setYear(2013);
         System.out.println();
+        myCar.setCost(100000);
+        System.out.println("the cost of your car after taxes is " + myCar.getCost());
+
 
 
         Bird myBird = new Bird("penguine", "black and white ");

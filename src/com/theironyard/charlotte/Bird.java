@@ -32,9 +32,9 @@ public class Bird {
     public void setColor(String birdColor) {
         color = birdColor;
 
-        if (color == "white") {
+        if (color.equals ("white")) {
             System.out.println("you like things simple");
-        } else if (color == "black") {
+        } else if (color.equals("black")) {
             System.out.println("your world is a little dark -- add some color");
 
         } else {

@@ -30,7 +30,7 @@ public class Dance {
     public void setPace(String dancePace) {
         pace = dancePace;
 
-        if (pace == "fast") {
+        if (pace.equals("fast")) {
             System.out.println("you like to move it");
         } else {
             System.out.println("slow gives you time to enjoy the music");
