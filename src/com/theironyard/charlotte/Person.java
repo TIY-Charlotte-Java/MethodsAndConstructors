@@ -8,21 +8,20 @@ public class Person {
     //Establish vars that describe person - all set private so they aren't tampered with
     private String name;
     private int age;
-    //boolean ageChange;
     private int hairLength;
     private String hairColor;
     private String eyeColor;
     private String sex;
+    private final static int requiredHair = 15;
 
     // Establish constructors for this class and assigning values for the object being created.
-
     public Person(String name, int age, int hairLength, String hairColor, String eyeColor, String sex) {
-        this.name = name;
-        this.age = age;
-        this.hairLength = hairLength;
-        this.hairColor = hairColor;
-        this.eyeColor = eyeColor;
-        this.sex = sex;
+        setName(name);
+        setAge(age);
+        setHairLength(hairLength);
+        setHairColor(hairColor);
+        setEyeColor(eyeColor);
+        setSex(sex);
     }
 
     //Create Getters and Setters for each variable
@@ -51,7 +50,7 @@ public class Person {
             this.hairLength = hairLength;
         }
         else {
-            System.out.println("Hair Length should be a positive number");;
+            System.out.println("Hair Length should be a positive number");
         }
     }
 
@@ -78,8 +77,12 @@ public class Person {
     public void setSex(String sex) {
         this.sex = sex;
     }
-    //Defines a method for randomly reassigning a new age 75% of the time to a person once they during the age potion
 
+    public static int getRequiredHair() {
+        return requiredHair;
+    }
+
+    //Defines a method for randomly reassigning a new age 75% of the time to a person once they during the age potion
     public void drinkAgePotion() {
         if (Math.random() >= 0.25) {
             age = (int) Math.floor(Math.random() * 101);
@@ -91,22 +94,36 @@ public class Person {
     }
 
     //Defines a method for combining hair length so we can later check if we have enough to make a rug.
-    //we also use an if statement to make sure that the other is not null when it is brought in so we don't
+    //Use an if statement to make sure that the other is not null when it is brought in so we don't
     //get a null no pointer exception
-
     int combinedHairLength(Person other) {
         if (other != null) {
-            return this.hairLength + other.hairLength;
-        } else {
+            if (hairLength == 0 || other.hairLength == 0) {
+                System.out.println("All hair lengths must be greater than zero.");
+                return this.hairLength + other.hairLength;
+            }
+                else if (this.hairLength + other.hairLength < requiredHair){
+                    System.out.println("There is not enough hair to make a rug :-(");
+                    return this.hairLength + other.hairLength;
+                }
+                else if (this.hairLength + other.hairLength >= requiredHair) {
+                    System.out.println("Yay you have enough enough hair to make a rug!");
+                    return this.hairLength + other.hairLength;
+                }
+                else{
+                    System.out.println("Weird, something weird happened.");
+                    return this.hairLength;
+                }
+        }
+        else {
             return this.hairLength;
         }
     }
 
     //Defines a method to measure the length difference between the names final name(other) minus initial name (this)
-
     int nameDiff(Person other) {
         if (other != null) {
-            return (other.name.length() - this.name.length());
+            return (Math.abs(other.name.length() - this.name.length()));
         } else {
             return this.name.length();
         }

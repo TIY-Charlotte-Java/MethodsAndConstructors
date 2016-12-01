@@ -10,15 +10,16 @@ public class Food {
     private int calorieCount;
     private int customerReview;
     private int spiceLevel;
-    //Establish Constructors and their
+
+    // Establish constructors for this class and assigning values for the object being created.
     public Food(String ethnicity, boolean fingerFood, int calorieCount, int customerReview, int spiceLevel) {
-        this.ethnicity = ethnicity;
-        this.fingerFood = fingerFood;
-        this.calorieCount = calorieCount;
-        this.customerReview = customerReview;
-        this.spiceLevel = spiceLevel;
+        setEthnicity(ethnicity);
+        setFingerFood(fingerFood);
+        setCalorieCount(calorieCount);
+        setConstomerReview(customerReview);
     }
 
+    //Establish getters and setters
     public String getEthnicity() {
         return ethnicity;
     }
@@ -56,6 +57,19 @@ public class Food {
     }
 
     public void setSpiceLevel(int spiceLevel) {
-        this.spiceLevel = spiceLevel;
+        if (spiceLevel < 5 && spiceLevel > 0){
+            this.spiceLevel = spiceLevel;
+        }
+        else{
+            System.out.println("The requested spice level exists outside of our Five Star system.");
+        }
     }
+
+    //Begin Methods
+
+
+
+
 }
+
+
