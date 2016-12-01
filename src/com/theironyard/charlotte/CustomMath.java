@@ -5,7 +5,7 @@ public class CustomMath {
     private double radius;
     private double legA;
     private double legB;
-    final double pi = 3.14;
+
 
     public CustomMath(double radius, double legA, double legB) {
         this.radius = radius;
@@ -37,8 +37,9 @@ public class CustomMath {
         this.legB = legB;
     }
 
-    public double findCircleArea (CustomMath cm) {
+    public static double findCircleArea (CustomMath cm) {
         double area;
+        final double pi = 3.14;
         double radius = cm.radius;
         radius *= radius;
         area = pi * radius;
